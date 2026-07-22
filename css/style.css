@@ -192,10 +192,15 @@ footer {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
-  display: flex;
+  display: none; /* Change from flex to none */
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+/* When active, JavaScript can toggle this class or inline style */
+.modal.active {
+  display: flex;
 }
 
 .modal-content {
