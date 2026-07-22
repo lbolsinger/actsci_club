@@ -19,18 +19,6 @@
   <div id="calendar-days" class="calendar-grid days-grid"></div>
 </div>
 
-<!-- Modal for Event Details -->
-<div id="event-modal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h4 id="modal-title"></h4>
-    <p id="modal-date" class="text-muted"></p>
-    <p id="modal-description"></p>
-    <div id="modal-actions" style="margin-top: 1rem;"></div>
-  </div>
-</div>
-
-<!-- JavaScript Integration -->
 <script>
   const events = [
     {% for event in site.data.events %}
@@ -79,13 +67,13 @@
 
         const dayEvents = events.filter(e => e.date === formattedDate);
         dayEvents.forEach(evt => {
-          const badge = document.createElement("div");
+          const badge = document.createElement("a");
           badge.classList.add("event-badge");
           badge.textContent = evt.title;
-          badge.onclick = (e) => {
-            e.stopPropagation();
-            openModal(evt);
-          };
+          badge.href = evt.link && evt.link !== "#" ? evt.link : "#";
+          if (evt.link && evt.link !== "#") {
+            badge.target = "_blank";
+          }
           cell.appendChild(badge);
         });
 
@@ -102,25 +90,6 @@
       currentDate.setMonth(currentDate.getMonth() + 1);
       renderCalendar();
     });
-
-    const modal = document.getElementById("event-modal");
-    const closeModal = document.querySelector(".close-modal");
-
-    function openModal(evt) {
-      document.getElementById("modal-title").textContent = evt.title;
-      document.getElementById("modal-date").textContent = evt.date;
-      document.getElementById("modal-description").textContent = evt.description;
-      
-      const actionsContainer = document.getElementById("modal-actions");
-      actionsContainer.innerHTML = evt.link && evt.link !== "#" 
-        ? `<a href="${evt.link}" class="btn" target="_blank">Event Link</a>` 
-        : "";
-
-      modal.style.display = "flex";
-    }
-
-    closeModal.onclick = () => { modal.style.display = "none"; };
-    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
     renderCalendar();
   });
