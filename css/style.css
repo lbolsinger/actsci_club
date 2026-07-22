@@ -17,6 +17,11 @@
 }
 
 /* Base Reset & Layout */
+
+html {
+  overflow-y: scroll; 
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,13 +66,13 @@ main {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 1.5rem;          /* Space between Home, Events, Resources */
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  white-space: nowrap; /* Ensures individual link names don't wrap */
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -81,30 +86,33 @@ main {
   color: var(--link-color);
 }
 
-/* Banner Image (Matches Info Cards width) */
+/* Banner Image */
 .banner-image, main img {
   width: 100%;
-  max-width: var(--max-content-width);
-  margin: 0 auto 2rem auto;
+  max-width: 100%;
+  margin: 0 0 2rem 0;
   border-radius: 8px;
   display: block;
-  box-sizing: border-box;
   object-fit: cover;
   max-height: 400px;
 }
 
-/* Individual Card Styling */
-.card, .info-card {
+/* Standardized Component Containers */
+.card, .info-card, .calendar-component {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.card, .info-card {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -113,20 +121,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* Calendar Component (Matches Card Width & Theme) */
-.calendar-component {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.75rem;
-  width: 100%;
-  max-width: var(--max-content-width);
-  margin: 2rem auto;
-  color: var(--text-primary);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; 
-}
-
+/* Calendar Specific Internal Layout */
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -141,7 +136,7 @@ main {
 
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr)); 
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 6px;
   width: 100%;
 }
@@ -163,7 +158,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  min-width: 0; 
+  min-width: 0;
 }
 
 .day-cell.empty {
