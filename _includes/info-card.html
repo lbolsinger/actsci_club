@@ -1,0 +1,7 @@
+<div class="card">
+  <h3>{{ include.title }}</h3>
+  <p>{{ include.description }}</p>
+  {% if include.link_text %}
+    {% include button.html text=include.link_text url=include.link_url style="secondary" %}
+  {% endif %}
+</div>
