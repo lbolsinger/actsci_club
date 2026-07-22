@@ -82,8 +82,7 @@ main {
 }
 
 /* Banner Image (Matches Info Cards width) */
-.banner-image, 
-main img {
+.banner-image, main img {
   width: 100%;
   max-width: var(--max-content-width);
   margin: 0 auto 2rem auto;
@@ -95,9 +94,7 @@ main img {
 }
 
 /* Uniform Grid Containers (Cards & Info Sections) */
-.cards-container, 
-.resources-grid, 
-.events-grid {
+.cards-container, .resources-grid, .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
@@ -107,8 +104,7 @@ main img {
 }
 
 /* Individual Card Styling */
-.card, 
-.info-card {
+.card, .info-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -122,8 +118,7 @@ main img {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.card:hover, 
-.info-card:hover {
+.card:hover, .info-card:hover {
   border-color: var(--text-muted);
   transform: translateY(-2px);
 }
@@ -135,7 +130,7 @@ main img {
   border-radius: 8px;
   padding: 1.5rem;
   width: 100%;
-  max-width: var(--max-content-width);
+  max-width: 100%; /* Fills the container width cleanly alongside event cards */
   margin: 2rem auto;
   color: var(--text-primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
