@@ -1,41 +1,32 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actuarial Science Club - Resources</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actuarial Science Club - Resources</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Actuarial Science Club</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="resources.html" class="active">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
+  {% include navbar.html %}
 
-    <main>
-        <section>
-            <h2>Academic & Career Resources</h2>
+  <main>
+    <section>
+      <h2>Academic & Career Resources</h2>
+      
+      {% include card.html 
+         title="Professional Exam Guides" 
+         description="Links to syllabi, recommended study materials, and timelines for early professional exams." %}
 
-            <div class="card">
-                <h3>Professional Exam Guides</h3>
-                <p>Links to syllabi, recommended study materials, and timelines for early professional exams.</p>
-            </div>
+      {% include card.html 
+         title="Resume & Templates" 
+         description="Download sample resume layouts tailored specifically for actuarial co-op applications." %}
+    </section>
+  </main>
 
-            <div class="card">
-                <h3>Resume & Resume Templates</h3>
-                <p>Download sample resume layouts tailored specifically for actuarial co-op and internship applications.</p>
-            </div>
-        </section>
-    </main>
-
-    {% include footer.html %}
+  {% include footer.html %}
 
 </body>
 </html>
