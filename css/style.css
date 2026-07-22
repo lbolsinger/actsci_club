@@ -130,11 +130,11 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   width: 100%;
-  max-width: 100%; /* Fills the container width cleanly alongside event cards */
+  max-width: var(--max-content-width);
   margin: 2rem auto;
   color: var(--text-primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  box-sizing: border-box; /* This keeps the padding inside the max-width boundary */
 }
 
 .calendar-header {
