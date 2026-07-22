@@ -106,3 +106,113 @@ footer {
     color: #6c757d;
     font-size: 0.9rem;
 }
+
+/* ==========================================
+   Calendar Component (Aligned with Site Theme)
+   ========================================== */
+.calendar-component {
+  background-color: var(--card-bg, #161b22);
+  border: 1px solid var(--border-color, #30363d);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--text-color, #c9d1d9);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+  color: var(--muted-color, #8b949e);
+  font-size: 0.85rem;
+}
+
+.day-cell {
+  background-color: var(--cell-bg, #0d1117);
+  border: 1px solid var(--border-color, #21262d);
+  border-radius: 6px;
+  min-height: 80px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-cell.empty {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.day-number {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--muted-color, #8b949e);
+}
+
+.event-badge {
+  background-color: var(--accent-color, #238636);
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s ease;
+}
+
+.event-badge:hover {
+  opacity: 0.85;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card-bg, #161b22);
+  border: 1px solid var(--border-color, #30363d);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--muted-color, #8b949e);
+}
