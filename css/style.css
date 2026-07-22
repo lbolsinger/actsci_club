@@ -85,17 +85,23 @@ p {
     display: block;
 }
 
-/* Event & Resource Cards */
-.card {
-    border-left: 4rem solid #003366;
-    background-color: #f0f4f8;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 0 6px 6px 0;
+/* Ensure the parent container uses a responsive grid with equal-width columns */
+.cards-container, 
+.resources-grid, 
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust 300px to your preferred baseline width */
+  gap: 1.5rem;
+  align-items: stretch; /* Forces all cards in a row to match height, keeping widths uniform */
 }
 
-.card h3 {
-    margin-bottom: 0.5rem;
+/* Ensure individual cards take up the full width of their grid cell */
+.card, 
+.info-card {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Footer */
