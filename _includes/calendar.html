@@ -20,7 +20,7 @@
 </div>
 
 <!-- Modal for Event Details -->
-<div id="event-modal" class="modal" hidden>
+<div id="event-modal" class="modal">
   <div class="modal-content">
     <span class="close-modal">&times;</span>
     <h4 id="modal-title"></h4>
@@ -30,8 +30,8 @@
   </div>
 </div>
 
+<!-- JavaScript Integration -->
 <script>
-  // Safely inject Jekyll data into JavaScript as an array
   const events = [
     {% for event in site.data.events %}
     {
@@ -64,14 +64,12 @@
       const firstDayIndex = new Date(year, month, 1).getDay();
       const lastDay = new Date(year, month + 1, 0).getDate();
 
-      // Empty slots for previous month padding
       for (let i = 0; i < firstDayIndex; i++) {
         const emptyCell = document.createElement("div");
         emptyCell.classList.add("day-cell", "empty");
         daysContainer.appendChild(emptyCell);
       }
 
-      // Fill in actual days
       for (let day = 1; day <= lastDay; day++) {
         const cell = document.createElement("div");
         cell.classList.add("day-cell");
@@ -79,7 +77,6 @@
         const formattedDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         cell.innerHTML = `<span class="day-number">${day}</span>`;
 
-        // Match events for this specific date
         const dayEvents = events.filter(e => e.date === formattedDate);
         dayEvents.forEach(evt => {
           const badge = document.createElement("div");
@@ -106,7 +103,6 @@
       renderCalendar();
     });
 
-    // Modal logic
     const modal = document.getElementById("event-modal");
     const closeModal = document.querySelector(".close-modal");
 
@@ -120,11 +116,11 @@
         ? `<a href="${evt.link}" class="btn" target="_blank">Event Link</a>` 
         : "";
 
-      modal.hidden = false;
+      modal.style.display = "flex";
     }
 
-    closeModal.onclick = () => { modal.hidden = true; };
-    window.onclick = (e) => { if (e.target === modal) modal.hidden = true; };
+    closeModal.onclick = () => { modal.style.display = "none"; };
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
     renderCalendar();
   });
