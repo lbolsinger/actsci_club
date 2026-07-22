@@ -26,11 +26,23 @@
     <h4 id="modal-title"></h4>
     <p id="modal-date" class="text-muted"></p>
     <p id="modal-description"></p>
-    <div id="modal-actions"></div>
+    <div id="modal-actions" style="margin-top: 1rem;"></div>
   </div>
 </div>
 
 <script>
+  // Safely inject Jekyll data into JavaScript as an array
+  const events = [
+    {% for event in site.data.events %}
+    {
+      date: "{{ event.date }}",
+      title: "{{ event.title | escape }}",
+      description: "{{ event.description | escape }}",
+      link: "{{ event.link }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
   document.addEventListener("DOMContentLoaded", function () {
     const monthYearLabel = document.getElementById("current-month-year");
     const daysContainer = document.getElementById("calendar-days");
@@ -38,11 +50,6 @@
     const nextBtn = document.getElementById("next-month");
 
     let currentDate = new Date();
-
-    // Sample events array - replace or extend as needed
-    const events = [
-      { date: "2026-06-02", title: "Actuarial 101 Panel", description: "Industry panel discussing pathways and exams." }
-    ];
 
     function renderCalendar() {
       daysContainer.innerHTML = "";
@@ -72,7 +79,7 @@
         const formattedDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         cell.innerHTML = `<span class="day-number">${day}</span>`;
 
-        // Check for matching events
+        // Match events for this specific date
         const dayEvents = events.filter(e => e.date === formattedDate);
         dayEvents.forEach(evt => {
           const badge = document.createElement("div");
@@ -107,6 +114,12 @@
       document.getElementById("modal-title").textContent = evt.title;
       document.getElementById("modal-date").textContent = evt.date;
       document.getElementById("modal-description").textContent = evt.description;
+      
+      const actionsContainer = document.getElementById("modal-actions");
+      actionsContainer.innerHTML = evt.link && evt.link !== "#" 
+        ? `<a href="${evt.link}" class="btn" target="_blank">Event Link</a>` 
+        : "";
+
       modal.hidden = false;
     }
 
