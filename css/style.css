@@ -41,14 +41,21 @@ main {
   padding: 2rem 1.5rem;
 }
 
-/* Navigation Bar */
+/* Horizontal Navigation Bar */
 header, nav {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
   gap: 2rem;
+  list-style: none;
 }
 
 nav a, header a {
@@ -62,15 +69,25 @@ nav a:hover, header a:hover {
   color: var(--link-color);
 }
 
+/* Full-Width Unstretched Banner */
+.banner-image, 
+header img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Uniform Grid Containers (Cards & Info Sections) */
 .cards-container, 
 .resources-grid, 
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   max-width: var(--max-content-width);
-  margin: 1.5rem auto;
+  margin: 2rem auto;
   align-items: stretch;
 }
 
@@ -80,7 +97,8 @@ nav a:hover, header a:hover {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.75rem;
+  margin-bottom: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -95,14 +113,15 @@ nav a:hover, header a:hover {
   transform: translateY(-2px);
 }
 
-/* Calendar Component Alignment */
+/* Calendar Component (Matches Card Width & Theme) */
 .calendar-component {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
+  width: 100%;
   max-width: var(--max-content-width);
-  margin: 1.5rem auto;
+  margin: 2rem auto;
   color: var(--text-primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
