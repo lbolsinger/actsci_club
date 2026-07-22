@@ -1,0 +1,24 @@
+{% comment %}
+==============================================================================
+REUSABLE BUTTON COMPONENT (_includes/button.html)
+
+Usage Examples:
+1. Basic Primary Button:
+   {% include button.html text="Register Now" url="events.html" %}
+
+2. Secondary External Link:
+   {% include button.html text="Join Discord" url="https://discord.gg/example" style="secondary" external=true %}
+
+Parameters:
+  - text     (required) : The button label text.
+  - url      (required) : Destination link/href.
+  - style    (optional) : 'primary' (default) or 'secondary'.
+  - external (optional) : Set to true to open in a new tab.
+==============================================================================
+{% endcomment %}
+
+<a href="{{ include.url }}" 
+   class="btn btn-{{ include.style | default: 'primary' }}" 
+   {% if include.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+  {{ include.text }}
+</a>
