@@ -113,7 +113,7 @@
   location: SLC - Multi-Purpose Room
   start_time: "18:00"
   end_time: "20:00"
-  description: ""
+  description: "Meet your mentor-mentee pair!"
   image:
     - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
     - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
@@ -126,3 +126,113 @@
   description: "Come learn about mutual companies with Equitable!"
   image:
     - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14KGUgl3uT3ZUOkDN-3sE3VIgtSJbkkU1lw&s"
+
+- date: 2026-06-03
+  name: Actuarial 101
+  location: STC 0010
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Learn from professors, upper years, and industry professionals about different areas of actuarial science!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+
+- date: 2026-06-10
+  name: Casino Night w/ UW Poker Club
+  location: MC 4460 & 4462
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Whether a beginner or a pro, join us for a couple hands of poker at casino night!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+
+- date: 2026-06-12
+  name: Round 2 Resume Critique Registration Opens
+  location: Programs Page
+  all_day: true
+  registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
+  description: "Get feedback on your resume!"
+  image:
+    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+
+- date: 2026-06-12
+  name: Round 2 Mock Interview Registration Opens
+  location: Programs Page
+  all_day: true
+  registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
+  description: "Practice your interview skills with an exec or upper year student!"
+  image:
+    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+
+- date: 2026-06-15
+  name: SQL Workshop w/ UW Stats Club
+  location: TBD
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Learn about relational databases and get an intro to SQL!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+
+- date: 2026-06-19
+  name: Round 2 Resume Critique Registration Deadline
+  location: Online
+  all_day: true
+  registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
+  description: "Get feedback on your resume!"
+  image:
+    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+
+- date: 2026-06-19
+  name: Round 2 Mock Interview Registration Deadline
+  location: Online
+  all_day: true
+  registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
+  description: "Practice your interview skills with an exec or upper year student!"
+  image:
+    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+
+- date: 2026-06-22
+  name: Midterm Destress
+  location: SLC - Black & Gold
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Make some slimes and grab some snack to de-stress during midterm season!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+
+
+- date: 2026-07-15
+  name: Case Comp 101
+  location: STC 0020
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Build up your resume with the some experience in actuarial case competition! Research, model, and make your pitch!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+
+- date: 2026-07-22
+  name: Mentorship Wrap Up
+  location: M3 Green
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Reflect on your growth this term along side your mentor and mentee!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+
+- date: 2026-05-13
+  name: Networking with Aviva
+  location: SLC - Black & Gold
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Join us for an info session with Aviva!"
+  image:
+    - "https://i0.wp.com/fourteenten.com/wp-content/uploads/2017/03/AVIVA-Client-Logo-Image.png?fit=800%2C560&ssl=1"
+
+- date: 2026-07-28
+  name: End of Term Social
+  location: EV3 Bonfire
+  start_time: "18:00"
+  end_time: "20:00"
+  description: "Join us for a bonfire social!"
+  image:
+    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
