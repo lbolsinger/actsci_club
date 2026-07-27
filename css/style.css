@@ -46,6 +46,10 @@ main {
   padding: 2rem 1.5rem;
 }
 
+section h2 {
+  margin-bottom: 1.5rem;
+}
+
 /* Navigation Bar (Horizontal, single line, no bullets) */
 .site-header {
   background-color: var(--bg-secondary);
