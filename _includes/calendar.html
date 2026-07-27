@@ -265,6 +265,11 @@ document.getElementById(
 "modal-terms"
 );
 
+const modalTermSection =
+document.getElementById(
+"modal-term-section"
+);
+
 
 const modalEvents =
 document.getElementById(
@@ -629,6 +634,8 @@ modalEvents.innerHTML="";
 
 if(dayTerms.length > 0){
 
+  modalTermSection.style.display = "block";
+
   dayTerms.forEach(term=>{
 
     modalTerms.innerHTML +=
@@ -636,19 +643,24 @@ if(dayTerms.length > 0){
 
     <div class="modal-event">
 
-    <strong>
-    ${term.term}
-    </strong>
+      <strong>
+      ${term.term}
+      </strong>
 
-    <p>
-    ${term.title}
-    </p>
+      <p>
+      ${term.title}
+      </p>
 
     </div>
 
     `;
 
   });
+
+}
+else{
+
+  modalTermSection.style.display = "none";
 
 }
 
