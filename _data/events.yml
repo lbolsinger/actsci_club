@@ -1,14 +1,16 @@
-- title: "Actuarial 101 Panel"
-  date: "2026-06-02"
-  description: "Industry panel discussing pathways, exams, and career options."
-  link: "#"
+- date: 2026-05-12
+  name: Networking with EY
+  location: Tatham Centre - 2218
+  start_time: "5:00 PM"
+  end_time: "7:00 PM"
+  registration_link: https://waterlooworks.uwaterloo.ca/events.htm?evtId=4578
+  description: "Get ready to learn about EY's actuarial consulting team!"
+  image:
+    - https://example.com/logo.png
 
-- title: "CAS/SOA Exam Prep Workshop"
-  date: "2026-06-15"
-  description: "Study strategies and practice questions for upcoming sitting."
-  link: "#"
-
-- title: "End of Term Social"
-  date: "2026-06-30"
-  description: "Board games and networking before exams."
-  link: "#"
+- date: 2026-05-12
+  name: Mentee Registration Opens
+  location: Online
+  all_day: true
+  registration_link: https://example.com/form
+  description: "Get matched with a mentor!"
