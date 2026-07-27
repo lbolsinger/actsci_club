@@ -622,40 +622,28 @@ modalEvents.innerHTML="";
 
 
 
-if(dayTerms.length===0){
+if(dayTerms.length > 0){
 
+  dayTerms.forEach(term=>{
 
-modalTerms.innerHTML=
-"<p>No term information.</p>";
+    modalTerms.innerHTML +=
+    `
 
+    <div class="modal-event">
 
-}
+    <strong>
+    ${term.term}
+    </strong>
 
-else{
+    <p>
+    ${term.title}
+    </p>
 
+    </div>
 
-dayTerms.forEach(term=>{
+    `;
 
-
-modalTerms.innerHTML +=
-`
-
-<div class="modal-event">
-
-<strong>
-${term.term}
-</strong>
-
-<p>
-${term.title}
-</p>
-
-</div>
-
-`;
-
-});
-
+  });
 
 }
 
