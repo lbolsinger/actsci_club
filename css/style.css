@@ -204,6 +204,12 @@ section {
   opacity: 0.85;
 }
 
+.event-more {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
