@@ -271,6 +271,11 @@ document.getElementById(
 "modal-events"
 );
 
+const modalEventSection =
+document.getElementById(
+"modal-event-section"
+);
+
 
 
 let currentDate =
@@ -653,37 +658,94 @@ if(dayTerms.length > 0){
 
 
 
-if(dayEvents.length>0){
+if(dayEvents.length > 0){
+
+  modalEventSection.style.display = "block";
+
+  dayEvents.forEach(event=>{
+
+    let time =
+    event.all_day
+    ?
+    "All Day"
+    :
+    `${event.start_time} - ${event.end_time}`;
 
 
-dayEvents.forEach(event=>{
+    let images="";
 
 
-let time =
-event.all_day
-?
-"All Day"
-:
-`${event.start_time} - ${event.end_time}`;
+    if(event.images.length){
+
+      images =
+      event.images.map(
+        img =>
+        `
+        <img src="${img}">
+        `
+      ).join("");
+
+    }
 
 
+    modalEvents.innerHTML +=
+    `
 
-let images="";
+    <div class="modal-event">
 
-
-if(event.images.length){
-
-
-images =
-event.images.map(
-img=>
-`
-<img src="${img}">
-`
-)
-.join("");
+      <h4>
+      ${event.name}
+      </h4>
 
 
+      <p>
+      <strong>Time:</strong>
+      ${time}
+      </p>
+
+
+      <p>
+      <strong>Location:</strong>
+      ${event.location}
+      </p>
+
+
+      <p>
+      ${event.description}
+      </p>
+
+
+      ${images}
+
+
+      ${
+      event.registration_link
+      ?
+      `
+      <a
+      class="btn"
+      href="${event.registration_link}"
+      target="_blank">
+      Register
+      </a>
+      `
+      :
+      ""
+      }
+
+
+    </div>
+
+    `;
+
+
+  });
+
+
+}
+else{
+
+  modalEventSection.style.display = "none";
 
 }
 
