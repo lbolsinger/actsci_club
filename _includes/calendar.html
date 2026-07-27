@@ -35,6 +35,7 @@
 </div>
 
 
+
 <!-- Calendar Modal -->
 
 <div id="calendar-modal" class="calendar-modal">
@@ -49,6 +50,9 @@
     <h2 id="modal-date"></h2>
 
 
+
+    <!-- Term Information -->
+
     <div id="modal-term-section">
 
       <h3>Term Information</h3>
@@ -57,6 +61,9 @@
 
     </div>
 
+
+
+    <!-- Events -->
 
     <div id="modal-event-section">
 
@@ -73,7 +80,9 @@
 
 
 
+
 <script>
+
 
 const events = [
 
@@ -81,6 +90,7 @@ const events = [
 
 {
   date: "{{ event.date }}",
+
   name: "{{ event.name | escape }}",
 
   location: "{{ event.location | escape }}",
@@ -97,22 +107,32 @@ const events = [
   description:
   "{{ event.description | escape }}",
 
+
   images:
 
   [
     {% for image in event.images %}
+
       "{{ image }}"
-      {% unless forloop.last %},{% endunless %}
+
+      {% unless forloop.last %}
+      ,
+      {% endunless %}
+
     {% endfor %}
   ]
 
 }
 
-{% unless forloop.last %},{% endunless %}
+{% unless forloop.last %}
+,
+{% endunless %}
 
 {% endfor %}
 
 ];
+
+
 
 
 
@@ -140,12 +160,14 @@ title:"Start of Classes"
 {% endif %}
 
 
+
 {% if term.start_office_hours %}
 {
 date:"{{ term.start_office_hours }}",
 title:"Start of Office Hours"
 },
 {% endif %}
+
 
 
 {% if term.start_reading_week %}
@@ -156,12 +178,14 @@ title:"Start of Reading Week"
 {% endif %}
 
 
+
 {% if term.end_reading_week %}
 {
 date:"{{ term.end_reading_week }}",
 title:"End of Reading Week"
 },
 {% endif %}
+
 
 
 {% if term.end_office_hours %}
@@ -172,6 +196,7 @@ title:"End of Office Hours"
 {% endif %}
 
 
+
 {% if term.end_classes %}
 {
 date:"{{ term.end_classes }}",
@@ -180,12 +205,14 @@ title:"End of Classes"
 {% endif %}
 
 
+
 {% if term.start_exams %}
 {
 date:"{{ term.start_exams }}",
 title:"Start of Exams"
 },
 {% endif %}
+
 
 
 {% if term.end_exams %}
@@ -198,10 +225,11 @@ title:"End of Exams"
 
 ]
 
-
 }
 
-{% unless forloop.last %},{% endunless %}
+{% unless forloop.last %}
+,
+{% endunless %}
 
 {% endfor %}
 
@@ -260,10 +288,12 @@ document.getElementById(
 );
 
 
+
 const modalTerms =
 document.getElementById(
 "modal-terms"
 );
+
 
 const modalTermSection =
 document.getElementById(
@@ -271,10 +301,13 @@ document.getElementById(
 );
 
 
+
 const modalEvents =
 document.getElementById(
 "modal-events"
 );
+
+
 
 const modalEventSection =
 document.getElementById(
@@ -286,38 +319,35 @@ document.getElementById(
 let currentDate =
 new Date();
 
-
-
-
-
 function sortEvents(list){
 
-
-return list.sort((a,b)=>{
-
-
-if(a.all_day && !b.all_day)
-return -1;
+  return list.sort((a,b)=>{
 
 
-if(!a.all_day && b.all_day)
-return 1;
+    // All-day events first
+
+    if(a.all_day && !b.all_day){
+      return -1;
+    }
+
+
+    if(!a.all_day && b.all_day){
+      return 1;
+    }
 
 
 
-return (
-(a.start_time || "99:99")
-.localeCompare(
-b.start_time || "99:99"
-)
-);
+    // Timed events sorted by start time
+
+    return (a.start_time || "99:99")
+      .localeCompare(
+        b.start_time || "99:99"
+      );
 
 
-});
-
+  });
 
 }
-
 
 
 
@@ -326,37 +356,37 @@ b.start_time || "99:99"
 function getTermsForDate(date){
 
 
-let results=[];
+  let results = [];
 
 
-terms.forEach(term=>{
+  terms.forEach(term=>{
 
 
-term.milestones.forEach(item=>{
+    term.milestones.forEach(item=>{
 
 
-if(item.date===date){
+      if(item.date === date){
 
 
-results.push({
+        results.push({
 
-term:term.name,
+          term: term.name,
 
-title:item.title
+          title: item.title
 
-});
-
-
-}
+        });
 
 
-});
+      }
 
 
-});
+    });
 
 
-return results;
+  });
+
+
+  return results;
 
 
 }
@@ -370,520 +400,594 @@ return results;
 function renderCalendar(){
 
 
-daysContainer.innerHTML="";
+  daysContainer.innerHTML = "";
 
 
-const year =
-currentDate.getFullYear();
 
+  const year =
+  currentDate.getFullYear();
 
-const month =
-currentDate.getMonth();
 
+  const month =
+  currentDate.getMonth();
 
 
-monthLabel.textContent =
-new Date(year,month)
-.toLocaleDateString(
-"en-US",
-{
-month:"long",
-year:"numeric"
-}
-);
 
 
+  monthLabel.textContent =
+  new Date(year, month)
+  .toLocaleDateString(
+    "en-US",
+    {
+      month:"long",
+      year:"numeric"
+    }
+  );
 
-const firstDay =
-new Date(
-year,
-month,
-1
-)
-.getDay();
 
 
 
-const totalDays =
-new Date(
-year,
-month+1,
-0
-)
-.getDate();
+  const firstDay =
+  new Date(
+    year,
+    month,
+    1
+  ).getDay();
 
 
 
 
+  const totalDays =
+  new Date(
+    year,
+    month + 1,
+    0
+  ).getDate();
 
-for(let i=0;i<firstDay;i++){
 
 
-const empty =
-document.createElement("div");
 
 
-empty.classList.add(
-"day-cell",
-"empty"
-);
+  // Empty cells before first day
 
+  for(let i = 0; i < firstDay; i++){
 
-daysContainer.appendChild(empty);
 
+    const empty =
+    document.createElement("div");
 
-}
 
+    empty.classList.add(
+      "day-cell",
+      "empty"
+    );
 
 
+    daysContainer.appendChild(empty);
 
 
+  }
 
-for(let day=1;day<=totalDays;day++){
 
 
-const cell =
-document.createElement("div");
 
 
-cell.classList.add(
-"day-cell"
-);
 
+  // Actual calendar days
 
+  for(let day = 1; day <= totalDays; day++){
 
-const date =
-`${year}-${String(month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
 
 
+    const cell =
+    document.createElement("div");
 
-cell.innerHTML =
-`
-<span class="day-number">
-${day}
-</span>
-`;
 
+    cell.classList.add(
+      "day-cell"
+    );
 
 
-const dayTerms =
-getTermsForDate(date);
 
 
+    const date =
+    `${year}-${String(month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
 
-const dayEvents =
-sortEvents(
-events.filter(
-event=>event.date===date
-)
-);
 
 
 
 
-
-let displayItems=[];
-
-
-
-dayTerms.forEach(term=>{
-
-
-displayItems.push({
-
-type:"term",
-
-title:term.title
-
-});
-
-
-});
-
-
-
-dayEvents.forEach(event=>{
-
-
-displayItems.push({
-
-type:"event",
-
-title:event.name
-
-});
-
-
-});
-
-
-
-
-
-displayItems
-.slice(0,3)
-.forEach(item=>{
-
-
-const badge =
-document.createElement("div");
-
-
-badge.classList.add(
-"event-badge"
-);
-
-
-
-badge.textContent =
-item.title;
-
-
-
-cell.appendChild(badge);
-
-
-
-});
-
-
-
-
-
-if(displayItems.length>3){
-
-
-const more =
-document.createElement("div");
-
-
-more.classList.add(
-"event-more"
-);
-
-
-more.textContent="...";
-
-
-cell.appendChild(more);
-
-
-}
-
-
-
-
-
-
-cell.addEventListener(
-"click",
-function(){
-
-openModal(
-date,
-dayTerms,
-dayEvents
-);
-
-}
-);
-
-
-
-daysContainer.appendChild(cell);
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-function openModal(
-date,
-dayTerms,
-dayEvents
-){
-
-
-modal.style.display="flex";
-
-
-
-modalDate.textContent=date;
-
-
-
-modalTerms.innerHTML="";
-
-
-modalEvents.innerHTML="";
-
-
-
-
-
-
-if(dayTerms.length > 0){
-
-  modalTermSection.style.display = "block";
-
-  dayTerms.forEach(term=>{
-
-    modalTerms.innerHTML +=
+    cell.innerHTML =
     `
-
-    <div class="modal-event">
-
-      <strong>
-      ${term.term}
-      </strong>
-
-      <p>
-      ${term.title}
-      </p>
-
-    </div>
-
+    <span class="day-number">
+      ${day}
+    </span>
     `;
 
-  });
 
-}
-else{
 
-  modalTermSection.style.display = "none";
 
-}
+    const dayTerms =
+    getTermsForDate(date);
 
 
 
 
+    const dayEvents =
+    sortEvents(
+      events.filter(
+        event =>
+        event.date === date
+      )
+    );
 
 
 
-if(dayEvents.length > 0){
-
-  modalEventSection.style.display = "block";
-
-  dayEvents.forEach(event=>{
-
-    let time =
-    event.all_day
-    ?
-    "All Day"
-    :
-    `${event.start_time} - ${event.end_time}`;
 
 
-    let images="";
+    let displayItems = [];
 
 
-    if(event.images.length){
 
-      images =
-      event.images.map(
-        img =>
-        `
-        <img src="${img}">
-        `
-      ).join("");
+
+    // Term information appears first
+
+    dayTerms.forEach(term=>{
+
+
+      displayItems.push({
+
+        type:"term",
+
+        title:term.title
+
+      });
+
+
+    });
+
+
+
+
+
+    // Events appear after terms
+
+    dayEvents.forEach(event=>{
+
+
+      displayItems.push({
+
+        type:"event",
+
+        title:event.name
+
+      });
+
+
+    });
+
+
+
+
+
+
+    // Show maximum of 3 items
+
+    displayItems
+    .slice(0,3)
+    .forEach(item=>{
+
+
+      const badge =
+      document.createElement("div");
+
+
+
+      badge.classList.add(
+        "event-badge"
+      );
+
+
+
+      badge.textContent =
+      item.title;
+
+
+
+      cell.appendChild(badge);
+
+
+
+    });
+
+
+
+
+
+
+    // More indicator
+
+    if(displayItems.length > 3){
+
+
+      const more =
+      document.createElement("div");
+
+
+      more.classList.add(
+        "event-more"
+      );
+
+
+      more.textContent =
+      "...";
+
+
+      cell.appendChild(more);
+
 
     }
 
 
-    modalEvents.innerHTML +=
-    `
-
-    <div class="modal-event">
-
-      <h4>
-      ${event.name}
-      </h4>
 
 
-      <p>
-      <strong>Time:</strong>
-      ${time}
-      </p>
 
 
-      <p>
-      <strong>Location:</strong>
-      ${event.location}
-      </p>
+
+    // Clicking a day opens modal
+
+    cell.addEventListener(
+      "click",
+      function(){
 
 
-      <p>
-      ${event.description}
-      </p>
+        openModal(
+          date,
+          dayTerms,
+          dayEvents
+        );
 
 
-      ${images}
+      }
+    );
 
 
-      ${
-      event.registration_link
+
+
+
+
+    daysContainer.appendChild(cell);
+
+
+
+  }
+
+
+
+}
+
+function openModal(
+  date,
+  dayTerms,
+  dayEvents
+){
+
+
+  modal.style.display = "flex";
+
+
+  modalDate.textContent = date;
+
+
+  modalTerms.innerHTML = "";
+
+  modalEvents.innerHTML = "";
+
+
+
+
+
+  /*
+    TERM INFORMATION
+  */
+
+
+  if(dayTerms.length > 0){
+
+
+    modalTermSection.style.display = "block";
+
+
+
+    dayTerms.forEach(term=>{
+
+
+      modalTerms.innerHTML +=
+      `
+
+      <div class="modal-event">
+
+
+        <h4>
+        ${term.term}
+        </h4>
+
+
+        <p>
+        ${term.title}
+        </p>
+
+
+      </div>
+
+      `;
+
+
+    });
+
+
+
+  }
+  else{
+
+
+    modalTermSection.style.display = "none";
+
+
+  }
+
+
+
+
+
+
+
+  /*
+    EVENTS
+  */
+
+
+  if(dayEvents.length > 0){
+
+
+    modalEventSection.style.display = "block";
+
+
+
+    dayEvents.forEach(event=>{
+
+
+      let time =
+      event.all_day
       ?
-      `
-      <a
-      class="btn"
-      href="${event.registration_link}"
-      target="_blank">
-      Register
-      </a>
-      `
+      "All Day"
       :
-      ""
+      `${event.start_time} - ${event.end_time}`;
+
+
+
+
+
+      let images = "";
+
+
+
+      if(event.images && event.images.length){
+
+
+        images =
+        event.images.map(
+          img =>
+          `
+          <img
+          src="${img}"
+          class="modal-image">
+          `
+        ).join("");
+
+
+
       }
 
 
-    </div>
-
-    `;
 
 
-  });
+
+
+      modalEvents.innerHTML +=
+      `
+
+      <div class="modal-event">
+
+
+        <h4>
+        ${event.name}
+        </h4>
+
+
+
+
+        <p>
+        <strong>Time:</strong>
+        ${time}
+        </p>
+
+
+
+
+        <p>
+        <strong>Location:</strong>
+        ${event.location}
+        </p>
+
+
+
+
+        <p>
+        ${event.description}
+        </p>
+
+
+
+
+        ${images}
+
+
+
+
+
+        ${
+        event.registration_link
+        ?
+        `
+        <a
+        class="btn"
+        href="${event.registration_link}"
+        target="_blank">
+
+        Register
+
+        </a>
+        `
+        :
+        ""
+        }
+
+
+
+      </div>
+
+
+      `;
+
+
+
+    });
+
+
+
+  }
+  else{
+
+
+    modalEventSection.style.display = "none";
+
+
+  }
+
 
 
 }
-else{
-
-  modalEventSection.style.display = "none";
-
-}
 
 
 
-modalEvents.innerHTML +=
-`
-
-<div class="modal-event">
-
-
-<h4>
-${event.name}
-</h4>
-
-
-<p>
-<strong>Time:</strong>
-${time}
-</p>
-
-
-<p>
-<strong>Location:</strong>
-${event.location}
-</p>
-
-
-<p>
-${event.description}
-</p>
-
-
-${images}
 
 
 
-${
-event.registration_link
-?
-`
-<a 
-class="btn"
-href="${event.registration_link}"
-target="_blank">
-Register
-</a>
-`
-:
-""
-}
 
 
 
-</div>
+/*
+  Close modal with X button
+*/
 
-`;
+
+closeModal.onclick =
+function(){
+
+
+  modal.style.display = "none";
+
+
+};
+
+
+
+
+
+
+
+/*
+  Close modal by clicking outside box
+*/
+
+
+modal.onclick =
+function(e){
+
+
+  if(e.target === modal){
+
+
+    modal.style.display = "none";
+
+
+  }
+
+
+};
+
+
+
+
+
+
+
+/*
+  Previous month
+*/
+
+
+prevBtn.onclick =
+function(){
+
+
+  currentDate.setMonth(
+    currentDate.getMonth() - 1
+  );
+
+
+  renderCalendar();
+
+
+};
+
+
+
+
+
+
+
+
+/*
+  Next month
+*/
+
+
+nextBtn.onclick =
+function(){
+
+
+  currentDate.setMonth(
+    currentDate.getMonth() + 1
+  );
+
+
+  renderCalendar();
+
+
+};
+
+
+
+
+
+
+// Initial render
+
+renderCalendar();
 
 
 
 });
-
-}
-
-
-}
-
-
-
-
-
-
-
-closeModal.onclick=function(){
-
-modal.style.display="none";
-
-};
-
-
-
-modal.onclick=function(e){
-
-if(e.target===modal){
-
-modal.style.display="none";
-
-}
-
-};
-
-
-
-
-
-
-prevBtn.onclick=function(){
-
-currentDate.setMonth(
-currentDate.getMonth()-1
-);
-
-renderCalendar();
-
-};
-
-
-
-
-nextBtn.onclick=function(){
-
-currentDate.setMonth(
-currentDate.getMonth()+1
-);
-
-renderCalendar();
-
-};
-
-
-
-
-
-renderCalendar();
-
-
-});
-
 </script>
