@@ -351,3 +351,25 @@ footer {
     max-height: 60px !important;
   }
 }
+
+/* Outer box that locks the height and clips everything outside of it */
+.instagram-image-only-wrapper {
+  width: 100%;
+  max-width: 450px;
+  height: 450px; /* Adjust height based on whether your posts are square (1:1) or portrait (4:5) */
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.instagram-crop-container {
+  position: absolute;
+  top: -55px; 
+  left: 0;
+  width: 100%;
+}
+
+.instagram-crop-container iframe {
+  min-width: 100% !important;
+}
