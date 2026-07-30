@@ -6,7 +6,7 @@
   registration_link: "https://waterlooworks.uwaterloo.ca/events.htm?evtId=4578"
   description: "Get ready to learn about EY's actuarial consulting team!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_mK7prBPwfnLYLRvEHY44H6izk8cXr9dyHA&s"
+    - ""
 
 - date: 2026-05-12
   name: Mentee Registration Opens
@@ -15,7 +15,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSe-rMp9pMAyH_i6IDmQ4gco2kv31i6sqzwqJ0b2_ddG2M-pcQ/viewform"
   description: "Get matched with a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-12
   name: Mentor Registration Opens
@@ -24,7 +24,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfLDb8P4LrodItz87C2zrc2GPSkSm0vkCBu8RS1uOLShN8lA/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-13
   name: Networking with Sun Life
@@ -34,7 +34,7 @@
   registration_link: "https://flows.beamery.com/sunlifecareers/sunlifespringnetworkingevent2026"
   description: "Join us for a game night with Sun Life!"
   image:
-    - "https://www.sunlife.ca/content/dam/sunlife/regional/canada/images/cxo/logo_yellowbkgrd_bluelogo_1200x1200_E.jpg"
+    - "/images/companies/sunlife-logo-1.jpg"
 
 - date: 2026-05-14
   name: Networking with RBC Insurance
@@ -43,7 +43,7 @@
   end_time: "20:00"
   description: "Come learn about RBC's coop program!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZmZUJ29MszElbTwijRZjSfq-Wa9d0LzA9vw&s"
+    - "/images/companies/rbc-logo-1.png"
 
 - date: 2026-05-15
   name: Round 1 Resume Critique Registration Opens
@@ -52,7 +52,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfEebzsdfGMnLMKZLmuLnpornh9lAPM8uymbQO3_gsm2tAH1w/viewform"
   description: "Get feedback on your resume!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-15
   name: Round 1 Mock Interview Registration Opens
@@ -61,8 +61,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfSFwjR-8Ibzp18p_FI1gjg8lGv2p1syV5YzHHzZe1_wAniGQ/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
 - date: 2026-05-20
   name: Beginning of Term Social
   location: MC Comfy
@@ -70,7 +69,8 @@
   end_time: "20:00"
   description: ""
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
 
 - date: 2026-05-22
   name: Round 1 Resume Critique Registration Deadline
@@ -79,8 +79,8 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfEebzsdfGMnLMKZLmuLnpornh9lAPM8uymbQO3_gsm2tAH1w/viewform"
   description: "Get feedback on your resume!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    
 - date: 2026-05-22
   name: Round 1 Mock Interview Registration Deadline
   location: Programs Page
@@ -88,8 +88,8 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfSFwjR-8Ibzp18p_FI1gjg8lGv2p1syV5YzHHzZe1_wAniGQ/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    
 - date: 2026-05-23
   name: Mentee Registration Deadline
   location: Programs Page
@@ -97,8 +97,8 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSe-rMp9pMAyH_i6IDmQ4gco2kv31i6sqzwqJ0b2_ddG2M-pcQ/viewform"
   description: "Get matched with a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    
 - date: 2026-05-23
   name: Mentor Registration Deadline
   location: Programs Page
@@ -106,8 +106,8 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfLDb8P4LrodItz87C2zrc2GPSkSm0vkCBu8RS1uOLShN8lA/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    
 - date: 2026-05-25
   name: Mentorship Kickoff
   location: SLC - Multi-Purpose Room
@@ -115,9 +115,9 @@
   end_time: "20:00"
   description: "Meet your mentor-mentee pair!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-05-27
   name: Networking with Equitable
   location: SLC - Black & Gold
@@ -125,8 +125,8 @@
   end_time: "20:00"
   description: "Come learn about mutual companies with Equitable!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14KGUgl3uT3ZUOkDN-3sE3VIgtSJbkkU1lw&s"
-
+    - "/images/companies/equitable-logo-1.jpg"
+    
 - date: 2026-06-03
   name: Actuarial 101
   location: STC 0010
@@ -134,8 +134,9 @@
   end_time: "20:00"
   description: "Learn from professors, upper years, and industry professionals about different areas of actuarial science!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-06-10
   name: Casino Night w/ UW Poker Club
   location: MC 4460 & 4462
@@ -143,8 +144,10 @@
   end_time: "20:00"
   description: "Whether a beginner or a pro, join us for a couple hands of poker at casino night!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-
+  image:
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-06-12
   name: Round 2 Resume Critique Registration Opens
   location: Programs Page
@@ -152,7 +155,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
   description: "Get feedback on your resume!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-12
   name: Round 2 Mock Interview Registration Opens
@@ -161,7 +164,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
   description: "Practice your interview skills with an exec or upper year student!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-15
   name: SQL Workshop w/ UW Stats Club
@@ -170,8 +173,9 @@
   end_time: "20:00"
   description: "Learn about relational databases and get an intro to SQL!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-06-19
   name: Round 2 Resume Critique Registration Deadline
   location: Online
@@ -179,7 +183,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
   description: "Get feedback on your resume!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-19
   name: Round 2 Mock Interview Registration Deadline
@@ -188,7 +192,7 @@
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
   description: "Practice your interview skills with an exec or upper year student!"
   image:
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
+    - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-22
   name: Midterm Destress
@@ -197,8 +201,8 @@
   end_time: "20:00"
   description: "Make some slimes and grab some snack to de-stress during midterm season!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
 
 - date: 2026-07-15
   name: Case Comp 101
@@ -207,8 +211,9 @@
   end_time: "20:00"
   description: "Build up your resume with the some experience in actuarial case competition! Research, model, and make your pitch!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-07-22
   name: Mentorship Wrap Up
   location: M3 Green
@@ -216,9 +221,9 @@
   end_time: "20:00"
   description: "Reflect on your growth this term along side your mentor and mentee!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
-    - "https://media.licdn.com/dms/image/v2/C4D0BAQEbSsP3tBMEnw/company-logo_200_200/company-logo_200_200/0/1630519918667?e=2147483647&v=beta&t=LYid7UAkGyA7ATftz-pychVmcM8M3RXVpeXn3AuTWc0"
-
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
+    
 - date: 2026-07-27
   name: Networking with Aviva
   location: SLC - Black & Gold
@@ -226,7 +231,7 @@
   end_time: "20:00"
   description: "Join us for an info session with Aviva!"
   image:
-    - "https://i0.wp.com/fourteenten.com/wp-content/uploads/2017/03/AVIVA-Client-Logo-Image.png?fit=800%2C560&ssl=1"
+    - "/images/companies/aviva-logo-1.png"
 
 - date: 2026-07-28
   name: End of Term Social
@@ -235,4 +240,5 @@
   end_time: "20:00"
   description: "Join us for a bonfire social!"
   image:
-    - "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn0xuRWh28lxsmQBdoyaMYhUDPqjjFXapvEw&s"
+    - "/images/club/actsci-club-logo-light.jpg"
+    - "images/mathsoc/mathsoc-logo.png"
