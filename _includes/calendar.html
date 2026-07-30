@@ -83,7 +83,8 @@
 
 <script>
 
-
+const SITE_BASE_URL = "{{ '' | relative_url }}";
+  
 const events = [
 
 {% for event in site.data.events %}
@@ -769,18 +770,17 @@ function openModal(
 
 
       let images = "";
-      if (event.images && event.images.length) {
-        images = event.images
-          .map(
-            img => `
-            <img 
-              src="{{ '' | relative_url }}${img.startsWith('/') ? '' : '/'}${img}" 
-              alt="${event.name}" 
-              class="modal-image"
-            />`
-          )
-          .join("");
-      }
+        if (event.images && event.images.length) {
+          images = event.images
+            .map(img => {
+              // Clean leading slash if base URL already handles relative paths
+              const cleanPath = img.startsWith('/') ? img : '/' + img;
+              const fullSrc = `${SITE_BASE_URL}${cleanPath}`.replace(/\/+/g, '/'); // prevents double slashes
+              
+              return `<img src="${fullSrc}" alt="${event.name}" class="modal-image" />`;
+            })
+            .join("");
+        }
 
 
 
