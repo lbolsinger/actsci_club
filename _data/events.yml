@@ -5,7 +5,7 @@
   end_time: "19:00"
   registration_link: "https://waterlooworks.uwaterloo.ca/events.htm?evtId=4578"
   description: "Get ready to learn about EY's actuarial consulting team!"
-  image:
+  images:
     - ""
 
 - date: 2026-05-12
@@ -14,7 +14,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSe-rMp9pMAyH_i6IDmQ4gco2kv31i6sqzwqJ0b2_ddG2M-pcQ/viewform"
   description: "Get matched with a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-12
@@ -23,7 +23,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfLDb8P4LrodItz87C2zrc2GPSkSm0vkCBu8RS1uOLShN8lA/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-13
@@ -33,7 +33,7 @@
   end_time: "20:00"
   registration_link: "https://flows.beamery.com/sunlifecareers/sunlifespringnetworkingevent2026"
   description: "Join us for a game night with Sun Life!"
-  image:
+  images:
     - "/images/companies/sunlife-logo-1.jpg"
 
 - date: 2026-05-14
@@ -42,7 +42,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Come learn about RBC's coop program!"
-  image:
+  images:
     - "/images/companies/rbc-logo-1.png"
 
 - date: 2026-05-15
@@ -51,7 +51,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfEebzsdfGMnLMKZLmuLnpornh9lAPM8uymbQO3_gsm2tAH1w/viewform"
   description: "Get feedback on your resume!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-05-15
@@ -60,7 +60,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfSFwjR-8Ibzp18p_FI1gjg8lGv2p1syV5YzHHzZe1_wAniGQ/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 - date: 2026-05-20
   name: Beginning of Term Social
@@ -68,7 +68,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: ""
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
 
@@ -78,7 +78,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfEebzsdfGMnLMKZLmuLnpornh9lAPM8uymbQO3_gsm2tAH1w/viewform"
   description: "Get feedback on your resume!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     
 - date: 2026-05-22
@@ -87,7 +87,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfSFwjR-8Ibzp18p_FI1gjg8lGv2p1syV5YzHHzZe1_wAniGQ/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     
 - date: 2026-05-23
@@ -96,7 +96,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSe-rMp9pMAyH_i6IDmQ4gco2kv31i6sqzwqJ0b2_ddG2M-pcQ/viewform"
   description: "Get matched with a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     
 - date: 2026-05-23
@@ -105,7 +105,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSfLDb8P4LrodItz87C2zrc2GPSkSm0vkCBu8RS1uOLShN8lA/viewform"
   description: "Pass down your knowledge as a mentor for the S26 term!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     
 - date: 2026-05-25
@@ -114,7 +114,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Meet your mentor-mentee pair!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -124,7 +124,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Come learn about mutual companies with Equitable!"
-  image:
+  images:
     - "/images/companies/equitable-logo-1.jpg"
     
 - date: 2026-06-03
@@ -133,7 +133,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Learn from professors, upper years, and industry professionals about different areas of actuarial science!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -143,8 +143,8 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Whether a beginner or a pro, join us for a couple hands of poker at casino night!"
-  image:
-  image:
+  images:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -154,7 +154,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
   description: "Get feedback on your resume!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-12
@@ -163,7 +163,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
   description: "Practice your interview skills with an exec or upper year student!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-15
@@ -172,7 +172,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Learn about relational databases and get an intro to SQL!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -182,7 +182,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdqGkmgkmXXeM62d4ERxbdYj7p-pQQU7zkm_LnQasWYZOF5pw/viewform?usp=header"
   description: "Get feedback on your resume!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-19
@@ -191,7 +191,7 @@
   all_day: true
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSeb8pFtEAr7MrAwCSB5T_0nn_aBdVjCymsCExRVpjn77MEfsA/viewform?usp=header"
   description: "Practice your interview skills with an exec or upper year student!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
 
 - date: 2026-06-22
@@ -200,7 +200,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Make some slimes and grab some snack to de-stress during midterm season!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
 
@@ -210,7 +210,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Build up your resume with the some experience in actuarial case competition! Research, model, and make your pitch!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -220,7 +220,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Reflect on your growth this term along side your mentor and mentee!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
     
@@ -230,7 +230,7 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Join us for an info session with Aviva!"
-  image:
+  images:
     - "/images/companies/aviva-logo-1.png"
 
 - date: 2026-07-28
@@ -239,6 +239,6 @@
   start_time: "18:00"
   end_time: "20:00"
   description: "Join us for a bonfire social!"
-  image:
+  images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
