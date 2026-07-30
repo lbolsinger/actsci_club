@@ -769,24 +769,17 @@ function openModal(
 
 
       let images = "";
-
-
-
-      if(event.images && event.images.length){
-
-
-        images =
-        event.images.map(
-          img =>
-          `
-          <img
-          src="${img}"
-          class="modal-image">
-          `
-        ).join("");
-
-
-
+      if (event.images && event.images.length) {
+        images = event.images
+          .map(
+            img => `
+            <img 
+              src="{{ '' | relative_url }}${img.startsWith('/') ? '' : '/'}${img}" 
+              alt="${event.name}" 
+              class="modal-image"
+            />`
+          )
+          .join("");
       }
 
 
