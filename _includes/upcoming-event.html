@@ -1,11 +1,26 @@
 {% if include.instagram_url %}
-<div class="upcoming-event-container">
+<div class="upcoming-event-embed">
   <blockquote 
     class="instagram-media" 
+    data-instgrm-captioned 
     data-instgrm-permalink="{{ include.instagram_url }}" 
-    data-instgrm-version="14">
+    data-instgrm-version="14" 
+    style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+    
+    <div style="padding:16px;">
+      <a href="{{ include.instagram_url }}" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+        <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-weight:550;">
+          View this post on Instagram
+        </div>
+      </a>
+    </div>
   </blockquote>
-  
+
   <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  </script>
 </div>
 {% endif %}
