@@ -1,20 +1,9 @@
-{% if include.image_path %}
+{% if include.instagram_url %}
 <div class="upcoming-event-card">
   <h3>Upcoming Event</h3>
-  <div class="event-image-wrapper">
-    {% if include.instagram_url %}
-      <a href="{{ include.instagram_url }}" target="_blank" rel="noopener noreferrer">
-        <img src="{{ include.image_path | relative_url }}" alt="{{ include.title | default: 'Upcoming Event' }}" class="upcoming-event-img">
-      </a>
-    {% else %}
-      <img src="{{ include.image_path | relative_url }}" alt="{{ include.title | default: 'Upcoming Event' }}" class="upcoming-event-img">
-    {% endif %}
-  </div>
-  {% if include.title %}
-    <h4>{{ include.title }}</h4>
-  {% endif %}
-  {% if include.instagram_url %}
-    <p><a href="{{ include.instagram_url }}" target="_blank" rel="noopener noreferrer" class="btn-instagram">View on Instagram &rarr;</a></p>
-  {% endif %}
+  <p>{{ include.title | default: "Check out our latest update on Instagram!" }}</p>
+  <a href="{{ include.instagram_url }}" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+    View Post on Instagram &rarr;
+  </a>
 </div>
 {% endif %}
