@@ -1,9 +1,11 @@
 {% if include.instagram_url %}
-<div class="upcoming-event-card">
-  <h3>Upcoming Event</h3>
-  <p>{{ include.title | default: "Check out our latest update on Instagram!" }}</p>
-  <a href="{{ include.instagram_url }}" target="_blank" rel="noopener noreferrer" class="btn-instagram">
-    View Post on Instagram &rarr;
-  </a>
+<div class="upcoming-event-container">
+  <blockquote 
+    class="instagram-media" 
+    data-instgrm-permalink="{{ include.instagram_url }}" 
+    data-instgrm-version="14">
+  </blockquote>
+  
+  <script async src="//www.instagram.com/embed.js"></script>
 </div>
 {% endif %}
