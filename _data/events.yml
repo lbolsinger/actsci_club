@@ -43,7 +43,7 @@
   end_time: "20:00"
   description: "Come learn about RBC's coop program!"
   images:
-    - "/images/companies/rbc-logo-3.png"
+    - "/images/companies/rbc-logo-3.jpg"
 
 - date: 2026-05-15
   name: Round 1 Resume Critique Registration Opens
@@ -62,12 +62,13 @@
   description: "Pass down your knowledge as a mentor for the S26 term!"
   images:
     - "/images/club/actsci-club-logo-light.jpg"
+    
 - date: 2026-05-20
   name: Beginning of Term Social
   location: MC Comfy
   start_time: "18:00"
   end_time: "20:00"
-  description: ""
+  description: "Get to know your execs for the term and say hi to old and new members of the UW actuarial community!"
   images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
