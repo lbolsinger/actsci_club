@@ -758,18 +758,13 @@ function openModal(
     dayEvents.forEach(event=>{
 
 
-      let time =
-      event.all_day
-      ?
-      "All Day"
-      :
-      `${event.start_time} - ${event.end_time}`;
-
-
-
-
-
-      let images = "";
+      dayEvents.forEach(event => {
+  
+        let time = event.all_day
+          ? "All Day"
+          : `${event.start_time} - ${event.end_time}`;
+      
+        let images = "";
         if (event.images && event.images.length) {
           images = event.images
             .map(img => {
@@ -779,10 +774,8 @@ function openModal(
             })
             .join("");
         }
-
-
-
-      modalEvents.innerHTML += `
+      
+        modalEvents.innerHTML += `
           <div class="modal-event">
             <div class="modal-event-body">
               <div class="modal-event-details">
