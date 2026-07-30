@@ -773,10 +773,8 @@ function openModal(
         if (event.images && event.images.length) {
           images = event.images
             .map(img => {
-              // Clean leading slash if base URL already handles relative paths
               const cleanPath = img.startsWith('/') ? img : '/' + img;
-              const fullSrc = `${SITE_BASE_URL}${cleanPath}`.replace(/\/+/g, '/'); // prevents double slashes
-              
+              const fullSrc = `${SITE_BASE_URL}${cleanPath}`.replace(/\/+/g, '/');
               return `<img src="${fullSrc}" alt="${event.name}" class="modal-image" />`;
             })
             .join("");
@@ -784,78 +782,25 @@ function openModal(
 
 
 
-
-
-
-      modalEvents.innerHTML +=
-      `
-
-      <div class="modal-event">
-
-
-        <h4>
-        ${event.name}
-        </h4>
-
-
-
-
-        <p>
-        <strong>Time:</strong>
-        ${time}
-        </p>
-
-
-
-
-        <p>
-        <strong>Location:</strong>
-        ${event.location}
-        </p>
-
-
-
-
-        <p>
-        ${event.description}
-        </p>
-
-
-
-
-        ${images}
-
-
-
-
-
-        ${
-        event.registration_link
-        ?
-        `
-        <a
-        class="btn"
-        href="${event.registration_link}"
-        target="_blank">
-
-        Register
-
-        </a>
-        `
-        :
-        ""
-        }
-
-
-
-      </div>
-
-
-      `;
-
-
-
-    });
+      modalEvents.innerHTML += `
+          <div class="modal-event">
+            <div class="modal-event-body">
+              <div class="modal-event-details">
+                <h4>${event.name}</h4>
+                <p><strong>Time:</strong> ${time}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                <p>${event.description}</p>
+                ${
+                  event.registration_link
+                    ? `<a class="btn" href="${event.registration_link}" target="_blank">Register</a>`
+                    : ""
+                }
+              </div>
+              ${images ? `<div class="modal-event-media">${images}</div>` : ""}
+            </div>
+          </div>
+        `;
+      });
 
 
 
