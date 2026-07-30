@@ -34,7 +34,7 @@
   registration_link: "https://flows.beamery.com/sunlifecareers/sunlifespringnetworkingevent2026"
   description: "Join us for a game night with Sun Life!"
   images:
-    - "/images/companies/sunlife-logo-1.jpg"
+    - "/images/companies/sunlife-logo-2.jpg"
 
 - date: 2026-05-14
   name: Networking with RBC Insurance
@@ -125,7 +125,7 @@
   end_time: "20:00"
   description: "Come learn about mutual companies with Equitable!"
   images:
-    - "/images/companies/equitable-logo-1.jpg"
+    - "/images/companies/equitable-logo-2.jpg"
     
 - date: 2026-06-03
   name: Actuarial 101
@@ -147,6 +147,7 @@
   images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
+    - "images/other/poker-club-logo.jpg"
     
 - date: 2026-06-12
   name: Round 2 Resume Critique Registration Opens
@@ -175,6 +176,7 @@
   images:
     - "/images/club/actsci-club-logo-light.jpg"
     - "images/mathsoc/mathsoc-logo.png"
+    - "images/other/stats-club-logo.jpg"
     
 - date: 2026-06-19
   name: Round 2 Resume Critique Registration Deadline
